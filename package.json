@@ -1,0 +1,23 @@
+{
+  "name": "injectify-include",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ftdebugger/injectify-include.git"
+  },
+  "author": "Evgeny Shpilevsky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ftdebugger/injectify-include/issues"
+  },
+  "homepage": "https://github.com/ftdebugger/injectify-include",
+  "devDependencies": {
+    "handlebars": "~2.0.0",
+    "injectify": "~0.0.0"
+  }
+}
