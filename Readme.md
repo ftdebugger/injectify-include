@@ -1,4 +1,4 @@
-Injectify include helper
+Injectify include helper [![Build Status](https://travis-ci.org/ftdebugger/injectify-include.svg)](https://travis-ci.org/ftdebugger/injectify-include)
 ========================
 
 Additional helper for handlebars, include template into template. Work similar to partials but with `browserify`.
