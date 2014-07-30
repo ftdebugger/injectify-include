@@ -27,6 +27,7 @@
     "karma": "^0.12.16",
     "karma-jasmine": "^0.1.5",
     "karma-phantomjs-launcher": "^0.1.4",
+    "underscore": "^1.6.0",
     "vinyl-source-stream": "^0.1.1"
   }
 }

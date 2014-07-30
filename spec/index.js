@@ -1,5 +1,7 @@
 describe("Injectify include helper", function() {
+    window._ = require("underscore");
 
+    //register 'view' helper
     require("../index");
 
     it("include file on level-0", function() {
