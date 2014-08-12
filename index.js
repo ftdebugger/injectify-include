@@ -31,7 +31,16 @@
             hash = options.hash;
         }
 
+        var context = this;
+
+        while (context && !context.view && context.__parent__) {
+            context = context.__parent__;
+        }
+
+        var view = context ? context.view : null;
+
         hash.__parent__ = this;
+        hash.view = view;
 
         return new Handlebars.SafeString(template(hash));
     };
