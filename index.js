@@ -42,6 +42,10 @@
         hash.__parent__ = this;
         hash.view = view;
 
+        if (options.fn) {
+            hash.content = options.fn(hash);
+        }
+
         return new Handlebars.SafeString(template(hash));
     };
 

@@ -24,4 +24,9 @@ describe("Injectify include helper", function() {
         expect(template({ param1: 'abc', param2: 'cde' })).toBe("abc-cde\n");
     });
 
+    it('include as block helper', function () {
+        var template = require('./fixture/tpl/block-include.hbs');
+        expect(template()).toBe('"1-2\n"\n');
+    });
+
 });
