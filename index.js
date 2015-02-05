@@ -5,7 +5,8 @@
     /**
      * @type {Handlebars}
      */
-    var Handlebars = require("injectify/runtime");
+    var Handlebars = require("injectify/runtime"),
+        utils = require('injectify/utils');
 
     /**
      * @param {Function} template
@@ -15,32 +16,14 @@
      * @returns {Handlebars.SafeString}
      */
     var includeHelper = function () {
-        var args = _.toArray(arguments),
-            options = args.pop(),
-            template = args.shift(),
-            hash;
-
-        if (args.length) {
-            hash = args.pop();
-        }
-
-        if (hash) {
-            hash = _.extend({}, hash, options.hash);
-        }
-        else {
-            hash = options.hash;
-        }
-
-        var context = this;
-
-        while (context && !context.view && context.__parent__) {
-            context = context.__parent__;
-        }
-
-        var view = context ? context.view : null;
+        var args = utils.extractArguments(this, _.toArray(arguments)),
+            options = args.options,
+            template = args.module,
+            hash = args.hash,
+            parentView = args.parentView;
 
         hash.__parent__ = this;
-        hash.view = view;
+        hash.view = parentView;
 
         if (options.fn) {
             hash.content = options.fn(hash);

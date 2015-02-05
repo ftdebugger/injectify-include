@@ -1,9 +1,9 @@
+window._ = require("underscore");
+
+//register 'view' helper
+require("../index");
+
 describe("Injectify include helper", function() {
-    window._ = require("underscore");
-
-    //register 'view' helper
-    require("../index");
-
     it("include file on level-0", function() {
         var template = require("./fixture/tpl/level-0.hbs");
         expect(template()).toBe("included 'low level\n'\n");
