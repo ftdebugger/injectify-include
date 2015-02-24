@@ -53,3 +53,14 @@ Now you can use `include` helper in your templates:
 
 `include` helper works like original browserify `require`. You can require modules relative to template file or
 node_modules directory.
+
+
+Changelog
+=========
+
+v2.0
+----
+
+ * Handlebars 3.0
+ * Injectify 2.0
+ 

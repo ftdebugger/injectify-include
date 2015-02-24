@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/ftdebugger/injectify-include",
   "dependencies": {
-    "injectify": "~1.0.5",
-    "handlebars": "~2.0.0"
+    "injectify": "~2.0.0",
+    "handlebars": "~3.0.0"
   },
   "devDependencies": {
     "gulp": "~3.8.5",
