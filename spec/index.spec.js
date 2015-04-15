@@ -29,4 +29,14 @@ describe("Injectify include helper", function() {
         expect(template()).toBe('"1-2\n"\na\n');
     });
 
+    it('include modules with exported string', function () {
+        var template = require('./fixture/tpl/string-include.hbs');
+        expect(template()).toBe('-me is string-exporting module-');
+    });
+
+    it('include module that exports nothing', function () {
+        var template = require('./fixture/tpl/empty-include.hbs');
+        expect(template()).toBe('--');
+    });
+
 });

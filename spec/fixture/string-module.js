@@ -1,0 +1,1 @@
+module.exports = 'me is string-exporting module';

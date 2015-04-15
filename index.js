@@ -29,7 +29,8 @@
             hash.content = options.fn(hash);
         }
 
-        return new Handlebars.SafeString(template(hash));
+        return typeof template == 'function' ? new Handlebars.SafeString(template(hash)) :
+            typeof template === 'string' ? new Handlebars.SafeString(template) : '';
     };
 
     Handlebars.registerHelper("include", includeHelper);
