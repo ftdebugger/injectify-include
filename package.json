@@ -1,6 +1,6 @@
 {
   "name": "injectify-include",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Include helper for handlebars and browserify",
   "main": "index.js",
   "author": "Evgeny Shpilevsky",
