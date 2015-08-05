@@ -1,5 +1,4 @@
-//noinspection BadExpressionStatementJS
-"use strict";
+'use strict';
 
-var injectify = require("injectify");
+var injectify = require('injectify');
 injectify.createTransform('include');
