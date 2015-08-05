@@ -1,6 +1,6 @@
 {
   "name": "injectify-include",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Include helper for handlebars and browserify",
   "main": "index.js",
   "author": "Evgeny Shpilevsky",
@@ -16,8 +16,7 @@
     "url": "https://github.com/ftdebugger/injectify-include/issues"
   },
   "homepage": "https://github.com/ftdebugger/injectify-include",
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "injectify": "*"
   },
