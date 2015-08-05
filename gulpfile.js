@@ -1,28 +1,31 @@
 /*jshint node: true*/
 
 (function () {
-    //noinspection BadExpressionStatementJS
     "use strict";
 
     var gulp = require("gulp"),
-        karma = require("karma").server;
+        KarmaServer = require("karma").Server;
 
     require("./inject");
 
     gulp.task('karma', function (done) {
-        karma.start({
+        var options = {
             configFile: __dirname + '/karma.conf.js',
             autoWatch: true,
             singleRun: false
-        }, done);
+        };
+
+        new KarmaServer(options, done).start();
     });
 
     gulp.task('test', function (done) {
-        karma.start({
+        var options = {
             configFile: __dirname + '/karma.conf.js',
             autoWatch: false,
             singleRun: true
-        }, done);
+        };
+
+        new KarmaServer(options, done).start();
     });
 
     gulp.task('default', ['karma']);
